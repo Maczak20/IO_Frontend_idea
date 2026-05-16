@@ -1,0 +1,552 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Główne tło i czcionka */
+body {
+	font-family: 'Segoe UI', Tahoma, sans-serif;
+	background-color: #f8fafc;
+	color: #1e293b;
+}
+
+/* Pasek nawigacji */
+nav {
+	background-color: #fff;
+	padding: 15px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Linki w menu */
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #64748b;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+nav a:hover {
+	color: #4f46e5;
+}
+
+/* Sekcja Powitalna */
+header {
+	text-align: center;
+	padding: 80px 20px;
+}
+
+header h1 {
+	color: #4f46e5;
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+header p {
+	color: #64748b;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+/* Wygląd przycisku */
+
+header button {
+	background-color: #4f46e5;
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+header button:hover {
+	background-color: #4338ca;
+}
+
+/*---------------------*/
+/* PROPOZYCJA OFERT */
+/*---------------------*/
+
+/* Sekcja z książkami */
+.books-section {
+	padding: 50px 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.books-section h2 {
+	text-align: center;
+	color: #1e293b;
+	margin-bottom: 40px;
+}
+
+/* Siatka (Grid) */
+.books-grid {
+	display: grid;
+	/* Ta jedna linijka mówi: "Zrób tyle kolumn, ile się zmieści. 
+       Każda musi mieć minimum 250px szerokości, ale może się rozciągać (1fr)" */
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px; /* Odstępy pionowe i poziome między kartami */
+}
+
+/* Wygląd pojednyczej karty */
+.book-card {
+	background-color: white;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+	transition:
+		transform 0.3s,
+		box-shadow 0.3;
+}
+
+.book-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Zastępcza okładka */
+.book-cover {
+	background-color: #a5b4fc;
+	height: 180px;
+	display: flex;
+	align-items: center;
+	font-size: 50px;
+	color: white;
+	font-weight: bold;
+}
+
+/* Informacje tekstowe pod okładka */
+.book-info {
+	padding: 20px;
+}
+
+.book-info h3 {
+	font-size: 18px;
+	color: #1e293b;
+	margin-bottom: 5px;
+}
+
+.book-info p {
+	color: #64748b;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+/* wyglad przycisku wymiany */
+.exchange-btn {
+	width: 100%;
+	background-color: white;
+	color: #4f46e5;
+	border: 2px solid #4f46e5;
+	padding: 10px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+.exchange-btn:hover {
+	background-color: #4f46e5;
+	color: white;
+}
+
+/*------------------------------*/
+/* PASEK WYSZUKIWANIA I FILTRÓW */
+/*------------------------------*/
+
+.search-section {
+	background-color: white;
+	padding: 20px;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+.search-container {
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+	gap: 15px;
+}
+
+/* Wygląd pola tekstowego i rozwijanej listy */
+.search-input,
+.filter-select {
+	padding: 12px 15px;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	font-size: 16px;
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+.search-input {
+	flex-grow: 1; /* Pole wyszukiwania zajmie najwięcej dostępnego miejsca */
+}
+
+/* efekt po kliknięciu (aktywacji) pola */
+.search-input:focus,
+.filter-select:focus {
+	border-color: #4f46e5;
+}
+
+.search-btn {
+	background-color: #1e293b;
+	color: white;
+	border: none;
+	padding: 0 25px;
+	border-radius: 6px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: bacground-color 0.3s;
+}
+
+.search-btn:hover {
+	background-color: #0f172a;
+}
+
+/*-----------------*/
+/* STOPKA (Footer) */
+/*-----------------*/
+
+footer {
+	background-color: #1e293b;
+	color: #f8fafc;
+	padding-top: 50px;
+	margin-top: 50px;
+}
+
+.footer-content {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 40px;
+	padding: 0 20px 40px;
+}
+
+.footer-section h3 {
+	color: white;
+	margin-bottom: 15px;
+}
+
+.footer-section h4 {
+	color: #a5b4fc;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+
+.footer-section p {
+	color: #94a3b8;
+	line-height: 1.6;
+}
+
+.footer-section a {
+	display: block;
+	color: #94a3b8;
+	text-decoration: none;
+	margin-bottom: 10px;
+	transition: color 0.3s;
+}
+
+.footer-section a:hover {
+	color: white;
+}
+
+.footer-bottom {
+	background-color: #0f172a;
+	text-align: center;
+	padding: 20px;
+	color: #64748b;
+	font-size: 14px;
+}
+
+/*-------------------------------------*/
+/* STRONA LOGOWANIA STYLE (login.html) */
+/*-------------------------------------*/
+
+.auth-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60vh; /* Zajmuje odpowiednią przestrzeń między menu a stopką */
+	padding: 40px 20px;
+}
+
+/* Białe pudełko (karta) formularza */
+.auth-container {
+	background-color: white;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+	width: 100%;
+	max-width: 400px; /* Szerokość idealna dla formularza na komputerze */
+}
+
+.auth-container h2 {
+	text-align: center;
+	color: #4f46e5;
+	margin-bottom: 30px;
+	font-size: 28px;
+}
+
+/* Pojedyncza sekcja: napis + input */
+.form-group {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 8px;
+	color: #1e293b;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 12px 15px;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	font-size: 16px;
+	transition: border-color 0.3s;
+	box-sizing: border-box; /* Zapewnia, że padding nie rozepcha inputa poza kartę */
+}
+
+/* Efekt podświetlenia po kliknięciu w pole wpisywania */
+.form-group input:focus {
+	outline: none;
+	border-color: #4f46e5;
+}
+
+/* Przycisk "Zaloguj" */
+.auth-btn {
+	width: 100%;
+	background-color: #4f46e5;
+	color: white;
+	border: none;
+	padding: 14px;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-top: 10px;
+}
+
+.auth-btn:hover {
+	background-color: #4338ca;
+}
+
+/* Tekst i link "Zarejestruj się" */
+.auth-switch {
+	text-align: center;
+	margin-top: 25px;
+	color: #64748b;
+	font-size: 14px;
+}
+
+.auth-switch a:hover {
+	text-decoration: underline; /* Podkreślenie linku "Zarejestruj się" po najechaniu */
+}
+
+/*------------------------------------------*/
+/* STRONA REJESTRACJI STYLE (register.html) */
+/*------------------------------------------*/
+
+/* przycisk akceptacji regulaminu */
+.form-checkbox {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+/* Nadpisanie domyślnej szerokości dla checkboxa */
+.form-checkbox input[type='checkbox'] {
+	width: auto;
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.form-checkbox label {
+	font-size: 13px;
+	color: #64748b;
+	font-weight: normal;
+	margin: 0;
+}
+
+.form-checkbox label a {
+	color: #4f46e5;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.form-checkbox label a:hover {
+	text-decoration: underline;
+}
+
+/*--------------------------------------*/
+/* PANEL MOJA PÓŁKA (UŻYTKOWNIKA) STYLE */
+/*--------------------------------------*/
+
+/* Główny kontener strony Moja Półka */
+.shelf-page {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px 20px;
+	min-height: 60vh;
+}
+
+/* Górny pasek z powitaniem i przyciskiem */
+.shelf-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+	flex-wrap: wrap; /* Gdy ekran będzie bardzo wąski, przycisk zeskoczy pod napis */
+	gap: 20px;
+}
+
+.shelf-header h1 {
+	color: #1e293b;
+	font-size: 32px;
+}
+
+/* Przycisk dodawania nowej książki */
+.shelf-add-book-btn {
+	background-color: #10b981;
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.add-book-btn:hover {
+	background-color: #059669;
+}
+
+/* Dwie kolumny obok siebie */
+.shelf-columns {
+	display: grid;
+	/* Tworzy kolumny, które na PC zajmują po 50% szerokości, a na telefonie ustawią się jedna pod drugą */
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 30px;
+}
+
+/* Wygląd pojedynczej kolumny (Półki) */
+.shelf-column {
+	background-color: white;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.shelf-column h2 {
+	color: #4f46e5;
+	font-size: 20px;
+	margin-bottom: 25px;
+	border-bottom: 2px solid #e2e8f0;
+	padding-bottom: 10px;
+}
+
+/* Kontener na listę książek */
+.shelf-books-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding-bottom: 15px;
+}
+
+/* Wygląc pojedynczego wiersza z książką */
+.shelf-book-item {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	transition: background-color 0.2s;
+}
+
+.shelf-book-item:hover {
+	background-color: #f8fafc;
+}
+
+/* Różnica wizualna dla "Listy życzeń" - przerywana ramka */
+.shelf-wishlist-item {
+	border-style: dashed;
+	border-color: #cbd5e1;
+}
+
+/* okładka książki */
+.shelf-book-cover {
+	width: 50px;
+	height: 70px;
+	background-color: #a5b4fc;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 4px;
+	flex-shrink: 0; /* Zapobiega spłaszczaniu okładki na małych ekranach */
+}
+
+/* Szara okładka dla poszukiwanych tytułów */
+.shelf-wishlist-item .shelf-book-cover {
+	background-color: #cbd5e1;
+}
+
+/* Sekcja z tytułem i autorem */
+.shelf-book-info {
+	margin-left: 15px;
+	flex-grow: 1; /* Wypchnięcie przycisku "usuń" maksymalnie do prawej */
+}
+
+.shelf-book-info h4 {
+	color: #1e293b;
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
+.shelf-book-info p {
+	color: #64748b;
+	font-size: 14px;
+}
+
+/* Przycisk "Usuń" */
+
+.shelf-delete-btn {
+	background-color: transparent;
+	color: #ef4444;
+	border: 1px solid #ef4444;
+	padding: 6px 12px;
+	border-radius: 4px;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.shelf-delete-btn:hover {
+	background-color: #ef4444;
+	color: white;
+}

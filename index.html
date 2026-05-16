@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Instant Book Exchange</title>
+	</head>
+	<body>
+		<nav>
+			<h2>Instant Book Exchange</h2>
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="shelf.html">Moja półka</a></li>
+				<li><a href="login.html">Zaloguj się</a></li>
+			</ul>
+		</nav>
+		<main>
+			<header>
+				<h1>Wymieniaj książki za darmo!</h1>
+				<p>Odkrywaj nowe tytuły, dziel się przeczytanymi i oszczędzaj</p>
+				<button>Zobacz oferty</button>
+			</header>
+            <section class="search-section">
+                <div class="search-container">
+                    <input type="text" placeholder="Szukaj po tytule lub po autorze..." class="search-input">
+                    <select class="filter-select">
+                        <option value="Wszystkie kategorie">Wszystkie kategorie</option>
+                        <option value="fantastyka">Fantastyka</option>
+                        <option value="kryminal">Kryminał</option>
+                        <option value="romans">Romans</option>
+                    </select>
+                    <button class="search-btn">Szukaj</button>
+                </div>
+            </section>
+			<section class="books-section">
+            <h2>Przykładowe oferty</h2>
+            
+            <div class="books-grid">
+                
+                <div class="book-card">
+                    <div class="book-cover">W</div>
+                    <div class="book-info">
+                        <h3>Wiedźmin: Ostatnie Życzenie</h3>
+                        <p>Andrzej Sapkowski</p>
+                        <button class="exchange-btn">Zaproponuj wymianę</button>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-cover">H</div>
+                    <div class="book-info">
+                        <h3>Hobbit</h3>
+                        <p>J.R.R. Tolkien</p>
+                        <button class="exchange-btn">Zaproponuj wymianę</button>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-cover">D</div>
+                    <div class="book-info">
+                        <h3>Diuna</h3>
+                        <p>Frank Herbert</p>
+                        <button class="exchange-btn">Zaproponuj wymianę</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+		</main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Instant Book Exchange</h3>
+                    <p>Wymieniaj książki, oszczędzaj pieniądze i chroń środowisko.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Przydatne linki</h4>
+                    <a href="#">Jak to działa?</a>
+                    <a href="#">Regulamin</a>
+                    <a href="#">Polityka prywatności</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">pomoc@bookexchange.pl</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Instant Book Exchange. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </footer>
+	</body>
+</html>

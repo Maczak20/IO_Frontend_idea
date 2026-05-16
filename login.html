@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Logowanie - Instant Book Exchange</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav>
+			<h2>Instant Book Exchange</h2>
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="shelf.html">Moja półka</a></li>
+				<li><a href="login.html">Zaloguj się</a></li>
+			</ul>
+		</nav>
+		<main class="auth-page">
+			<div class="auth-container">
+				<h2>Zaloguj się</h2>
+				<form>
+					<div class="form-group">
+						<label for="email">Adres E-mail</label>
+						<input
+							type="email"
+							id="email"
+							required
+							placeholder="jan@kowalski.pl"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="password">Hasło</label>
+						<input
+							type="password"
+							id="password"
+							required
+							placeholder="Wpisz swoje hasło"
+						/>
+					</div>
+					<button type="submit" class="auth-btn">Zaloguj</button>
+				</form>
+
+				<div class="auth-switch">
+					<p>
+						Nie masz jeszcze konta? <a href="register.html">Zarejestruj się</a>
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="footer-content">
+				<div class="footer-section">
+					<h3>Instant Book Exchange</h3>
+					<p>Wymieniaj książki, oszczędzaj pieniądze i chroń środowisko.</p>
+				</div>
+				<div class="footer-section">
+					<h4>Przydatne linki</h4>
+					<a href="#">Jak to działa?</a>
+					<a href="#">Regulamin</a>
+					<a href="#">Polityka prywatności</a>
+				</div>
+				<div class="footer-section">
+					<h4>Kontakt</h4>
+					<a href="#">Facebook</a>
+					<a href="#">Instagram</a>
+					<a href="#">pomoc@bookexchange.pl</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2026 Instant Book Exchange. Wszelkie prawa zastrzeżone.</p>
+			</div>
+		</footer>
+	</body>
+</html>
