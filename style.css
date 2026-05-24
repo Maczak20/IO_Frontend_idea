@@ -9,7 +9,12 @@ body {
 	font-family: 'Segoe UI', Tahoma, sans-serif;
 	background-color: #f8fafc;
 	color: #1e293b;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+
 
 /* Pasek nawigacji */
 nav {
@@ -224,7 +229,7 @@ footer {
 	background-color: #1e293b;
 	color: #f8fafc;
 	padding-top: 50px;
-	margin-top: 50px;
+	margin-top: auto;
 }
 
 .footer-content {
@@ -277,6 +282,7 @@ footer {
 /*-------------------------------------*/
 
 .auth-page {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -405,6 +411,7 @@ footer {
 
 /* Główny kontener strony Moja Półka */
 .shelf-page {
+	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 40px 20px;
@@ -549,4 +556,171 @@ footer {
 .shelf-delete-btn:hover {
 	background-color: #ef4444;
 	color: white;
+}
+/*------------------------------*/
+/* STRONA AUKCJI STYLE          */
+/*------------------------------*/
+
+/* Główny kontener */
+.auctions-page {
+	display: flex;
+	gap: 30px;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px 20px;
+	align-items: flex-start; /* Zapobiega sztucznemu rozciąganiu lewego panelu w dół */
+}
+
+/*Lewy panel z filtrami */
+.filters-sidebar {
+	width: 280px;
+	flex-shrink: 0; /* Zabezpiecza przed zgniataniem panelu przez książki po prawej */
+	background-color: white;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.filters-sidebar h3 {
+	color: #1e293b;
+	margin-bottom: 20px;
+	font-size: 18px;
+	border-bottom: 1px solid #e2e8f0;
+	padding-bottom: 10px;
+}
+
+/* Elementy formularza filtrującego */
+.filter-group {
+	margin-bottom: 15px;
+}
+
+.filter-group label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #1e293b;
+}
+
+.filter-group input,
+.filter-group select {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	font-size: 14px;
+	outline: none;
+	transition: border-color 0.3s;
+	box-sizing: border-box;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+	border-color: #4f46e5;
+}
+
+/*Przycisk pod filtrami */
+.filter-btn {
+	width: 100%;
+	background-color: #1e293b;
+	color: white;
+	border: none;
+	padding: 12px;
+	border-radius: 6px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-top: 10px;
+}
+
+.filter-btn:hover {
+	background-color: #0f172a;
+}
+
+/* Prawa sekcja (Siatka z książkami) */
+.auctions-content {
+	flex: 1;
+}
+
+.auctions-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 25px;
+}
+
+.auctions-header h2 {
+	color: #1e293b;
+	font-size: 24px;
+}
+
+.auctions-header p {
+	color: #64748b;
+	font-size: 14px;
+}
+
+/* Modifikator dla informacji o stanie książki (wymiana inline styles z index.html) */
+.book-condition {
+	font-size: 12px;
+	color: #4f46e5;
+	margin-top: -10px;
+	margin-bottom: 15px;
+}
+
+/* Responsywność dla małych ekranów (np. tablety, telefony) */
+@media (max-width: 850px) {
+    .auctions-page {
+        flex-direction: column;
+    }
+    
+    .filters-sidebar {
+        width: 100%;
+    }
+    
+    .auctions-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* ==========================================================================
+   GLOBALNA RESPONSYWNOŚĆ (Smartfony i małe tablety - do 768px szerokości)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Menu górne: Logo na górze, linki pod spodem */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 2. Strona Główna - Sekcja powitalna: zmniejszamy czcionkę i marginesy */
+    header {
+        padding: 40px 20px;
+    }
+    
+    header h1 {
+        font-size: 28px;
+    }
+
+    /* 3. Wyszukiwarka (index.html): Układamy elementy jeden pod drugim */
+    .search-container {
+        flex-direction: column;
+    }
+    
+    /* 4. Moja Półka (shelf.html): Przycisk "Dodaj nową książkę" wskakuje pod powitanie */
+    .shelf-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
 }
