@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aukcje - Instant Book Exchange</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav>
+			<h2>Instant Book Exchange</h2>
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="shelf.html">Moja półka</a></li>
+				<li><a href="aukcje.html">Aukcje</a></li>
+				<li><a href="login.html">Zaloguj się</a></li>
+			</ul>
+		</nav>
+		<main class="auctions-page">
+			<aside class="filters-sidebar">
+				<h3>Filtruj oferty</h3>
+				<div class="filter-group">
+					<label for="search-title">Szukaj tytułu/autora</label>
+					<input type="text" id="search-title" placeholder="np. Diuna" />
+				</div>
+				<div class="filter-group">
+					<label for="filter-category">Kategoria</label>
+					<select id="filter-category">
+						<option value="">Wszystkie kategorie</option>
+						<option value="Fantastyka">Fantastyka</option>
+						<option value="Kryminał">Kryminał</option>
+						<option value="Romans">Romans</option>
+						<option value="Informatyka">Informatyka</option>
+					</select>
+				</div>
+				<div class="filter-group">
+					<label for="filter-condition">Stan książki</label>
+					<select id="filter-condition">
+						<option value="">Dowolny stan</option>
+						<option value="Nowa">Nowa</option>
+						<option value="Idealny">Idealny</option>
+						<option value="Bardzo dobry">Bardzo dobry</option>
+						<option value="Dobry">Dobry</option>
+					</select>
+				</div>
+				<button class="filter-btn">Zastosuj filtry</button>
+			</aside>
+			<section class="auctions-content">
+				<div class="auctions-header">
+					<h2>Dostępne książki na wymianę</h2>
+					<p>Znaleziono: <strong>3 </strong>oferty</p>
+				</div>
+				<div class="books-grid">
+					<div class="book-card">
+						<div class="book-cover">M</div>
+						<div class="book-info">
+							<h3>Miecz Przeznaczenia</h3>
+							<p>Andrzej Sapkowski</p>
+							<p class="book-condition">Stan: Idealny</p>
+							<button class="exchange-btn">Zaproponuj wymianę</button>
+						</div>
+					</div>
+
+					<div class="book-card">
+						<div class="book-cover">F</div>
+						<div class="book-info">
+							<h3>Fundacja</h3>
+							<p>Isaac Asimov</p>
+							<p class="book-condition">Stan: Dobry</p>
+							<button class="exchange-btn">Zaproponuj wymianę</button>
+						</div>
+					</div>
+
+					<div class="book-card">
+						<div class="book-cover">L</div>
+						<div class="book-info">
+							<h3>Lśnienie</h3>
+							<p>Stephen King</p>
+							<p class="book-condition">Stan: Bardzo dobry</p>
+							<button class="exchange-btn">Zaproponuj wymianę</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer-content">
+				<div class="footer-section">
+					<h3>Instant Book Exchange</h3>
+					<p>Wymieniaj książki, oszczędzaj pieniądze i chroń środowisko.</p>
+				</div>
+				<div class="footer-section">
+					<h4>Przydatne linki</h4>
+					<a href="#">Jak to działa?</a>
+					<a href="#">Regulamin</a>
+					<a href="#">Polityka prywatności</a>
+				</div>
+				<div class="footer-section">
+					<h4>Kontakt</h4>
+					<a href="#">Facebook</a>
+					<a href="#">Instagram</a>
+					<a href="#">pomoc@bookexchange.pl</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2026 Instant Book Exchange. Wszelkie prawa zastrzeżone.</p>
+			</div>
+		</footer>
+	</body>
+</html>
